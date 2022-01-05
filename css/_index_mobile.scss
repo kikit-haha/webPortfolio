@@ -1,0 +1,91 @@
+@media screen and (max-width: 768px) {
+  .introduce {
+    .intro {
+      font-size: 2rem;
+      padding: 0 35px;
+    }
+  }
+
+  .introduce01 div.skill_button {
+    width: 20vw;
+    height: 20vw;
+    left: 38vw;
+    top: -60px;
+
+    font-size: 1.3rem;
+  }
+
+  .skills {
+    width: 60vw;
+    height: 34vh;
+    margin-left: 50%;
+    transform: translateX(-30vw);
+
+    li {
+      height: 1.6rem;
+      flex-direction: column;
+    }
+
+    .skill_label {
+      text-indent: 10px;
+      border-radius: 10px;
+    }
+
+    .skill_text {
+      width: 30%;
+      font-size: 0.8rem;
+      height: 100%;
+      padding: 0 10px;
+      line-height: 1.6rem;
+    }
+
+    .skillbar {
+      width: 60%;
+      height: 100%;
+      border-radius: 10px;
+      font-size: 0.8rem;
+    }
+  }
+
+  .introduce01 {
+    height: 100%;
+    position: relative;
+    left: 0px;
+    top: 20px;
+  }
+
+  figure.project {
+    position: relative;
+
+    img {
+      height: 80%;
+      width: 100%;
+    }
+  }
+
+  figcaption a {
+    opacity: 1;
+    font-size: 1.1rem;
+    background-color: transparent;
+
+    div {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      height: 20%;
+      opacity: 1;
+    }
+  }
+
+  .project01,
+  .project02,
+  .project03,
+  .project04,
+  .project05 {
+    left: 0;
+    width: 100vw;
+    top: 60px;
+    margin-bottom: 100px;
+  }
+}

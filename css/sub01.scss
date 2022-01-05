@@ -1,0 +1,57 @@
+@charset "utf-8";
+@import "reset";
+@import "base";
+@import "layout";
+
+// 컨텐츠영역 서식
+.section_inner {
+  width: 1200px;
+  margin: 0px auto;
+}
+article {
+  width: 100%;
+  overflow-x: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+.cont_title {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  text-align: center;
+  img {
+    width: 60%;
+  }
+  h2 {
+    font-size: 0px;
+  }
+}
+
+.cont01 {
+  position: relative;
+  a {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 60px;
+    height: 60px;
+    vertical-align: middle;
+    padding: 0 40px;
+
+    border-radius: 8px;
+    background-color: $black;
+    color: $lightgray;
+
+    font-size: 16px;
+    transition: all 0.5s linear;
+
+    &:hover {
+      top: 90px;
+      background-color: $lightgray;
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,340 @@
+@charset "utf-8";
+
+@import "reset";
+@import "base";
+@import "layout";
+
+$wallblack: #1d1d1dcc;
+/*헤더영역 서식*/
+.top_menu {
+  display: none;
+}
+
+h1 {
+  z-index: 2;
+}
+
+div.progress {
+  transform: rotate(-90deg);
+  left: 50%;
+  top: -69px;
+}
+
+/*콘텐츠영역 서식 시작*/
+body {
+  height: 500vw;
+  -webkit-overflow-scrolling: touch;
+  color: #555;
+  transition: 0.5s;
+}
+
+section {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  perspective: 1000px;
+}
+
+// project 서식
+.wall {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.wall-left {
+  width: 1200vw;
+  background: $wallblack;
+  transform: rotateY(90deg) translateZ(-600vw);
+}
+
+.wall-right {
+  width: 1200vw;
+  background: $wallblack;
+  transform: rotateY(90deg) translateZ(-500vw);
+}
+
+article {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+  transform: translateZ(-490vw);
+  // transform: translateZ(-50vw);
+}
+
+figure.project {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+
+  transition: 0.3s;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    transition: 0.3s;
+
+    object-fit: cover;
+    height: 100%;
+    // width: 100%;
+  }
+}
+
+.project figcaption > a {
+  width: 12vw;
+  height: 19vw;
+
+  font-size: 1.6vw;
+  line-height: 1.4em;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.404);
+  color: $white;
+  border-radius: 30px;
+
+  position: absolute;
+  bottom: 10vh;
+  right: 3vw;
+
+  margin: 0 auto;
+  padding: 10px 0.4em;
+
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: center;
+  box-shadow: 0px 3px 4px rgba(51, 51, 51, 0.616);
+  animation: animate_link 1.5s alternate infinite
+    cubic-bezier(0.45, 0.05, 0.55, 0.99);
+  &:hover {
+    box-shadow: 0px 3px 4px rgba(223, 223, 223, 0.8);
+  }
+  small {
+    display: block;
+    font-size: 1vw;
+    line-height: 1.2em;
+    font-weight: 300;
+    margin-bottom: 1em;
+  }
+}
+
+@keyframes animate_link {
+  to {
+    transform: translateY(-30px);
+  }
+}
+
+.project01 {
+  transform: translateZ(300vw);
+}
+
+.project02 {
+  transform: translateZ(120vw);
+}
+
+.project03 {
+  transform: translateZ(-60vw);
+}
+
+.project04 {
+  transform: translateZ(-240vw);
+}
+
+.project05 {
+  transform: translateZ(-420vw);
+}
+
+article.introduce01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  background-color: $lightgray;
+}
+// 어사이드 영역 서식
+@keyframes scroll_btn {
+  to {
+    transform: translateY(10px);
+    opacity: 0.7;
+  }
+}
+
+aside {
+  position: fixed;
+  z-index: 9999;
+  bottom: 30px;
+  width: 70px;
+  height: 112px;
+  border: 1px solid rgba(255, 255, 255, 0.404);
+  color: rgba(255, 255, 255, 0.404);
+  border-radius: 30px;
+  text-align: center;
+  left: calc(50% - 30px);
+  padding-top: 24px;
+  img {
+    width: 40px;
+    height: 30px;
+    transform: translateY(0px);
+    opacity: 0.2;
+    animation: scroll_btn 1.8s infinite alternate cubic-bezier(0.35, -0.1, 1, 1);
+
+    &:last-child {
+      margin-top: -14px;
+    }
+  }
+}
+
+// 푸터영역 서식
+footer {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  clear: both;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: 500vw;
+    -webkit-overflow-scrolling: touch;
+    color: #555;
+    transition: 0.5s;
+  }
+
+  section {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    perspective: unset;
+  }
+
+  // project 서식
+  .wall {
+    display: none;
+  }
+
+  article {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 90vw;
+    margin: 0 auto;
+    height: 100%;
+    transform-style: unset;
+    transform: translateZ(0vw);
+    // transform: translateZ(-50vw);
+  }
+
+  figure.project {
+    overflow: hidden;
+    width: 100%;
+    height: 60vh;
+    background-color: #000;
+
+    transition: 0.3s;
+
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20vh;
+    img {
+      transition: 0.3s;
+
+      object-fit: cover;
+      height: 100%;
+      // width: 100%;
+    }
+  }
+
+  .project figcaption > a {
+    width: 12vw;
+    height: 19vw;
+
+    font-size: 1.6vw;
+    line-height: 1.4em;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.404);
+    color: $white;
+    border-radius: 30px;
+
+    position: absolute;
+    bottom: 10vh;
+    right: 3vw;
+
+    margin: 0 auto;
+    padding: 10px 0.4em;
+
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    box-shadow: 0px 3px 4px rgba(51, 51, 51, 0.616);
+    animation: animate_link 1.5s alternate infinite
+      cubic-bezier(0.45, 0.05, 0.55, 0.99);
+    &:hover {
+      box-shadow: 0px 3px 4px rgba(223, 223, 223, 0.8);
+    }
+    small {
+      display: block;
+      font-size: 1vw;
+      line-height: 1.2em;
+      font-weight: 300;
+      margin-bottom: 1em;
+    }
+  }
+
+  .project01 {
+    transform: translateZ(300vw);
+  }
+
+  .project02 {
+    transform: translateZ(120vw);
+  }
+
+  .project03 {
+    transform: translateZ(-60vw);
+  }
+
+  .project04 {
+    transform: translateZ(-240vw);
+  }
+
+  .project05 {
+    transform: translateZ(-420vw);
+  }
+
+  article.introduce01 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    background-color: $lightgray;
+  }
+
+  aside {
+    display: none;
+  }
+}

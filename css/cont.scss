@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+@import "reset";
+@import "base";
+@import "layout";
+
+$value_none: none;
+$fsize: 1rem;
+$wsize: 100%;
+$hsize: 100%;
+$yellow: #ffd110;
+
+html,
+body {
+  height: $hsize;
+  width: $wsize;
+}
+
+.bgcontainer {
+  width: $wsize;
+  height: $hsize;
+  position: fixed;
+  top: 0px;
+}
+
+.bgwrap {
+  width: $wsize * 4;
+  display: flex;
+  height: 100vh;
+  margin-left: -$wsize;
+}
+
+.bg {
+  width: $wsize / 4;
+  height: 100vh;
+  //백그라운드사이즈 주의!
+  background-size: 100%;
+}
+
+.bg01 {
+  background-image: url(../image/bg1.png);
+}
+
+.bg02 {
+  background-image: url(../image/bg11.png);
+}
+
+.bg03 {
+  background-image: url(../image/bg9.png);
+}
+
+.bg04 {
+  background-image: url(../image/bg8.png);
+}
+
+/* 목업서식 */
+.mockup {
+  position: relative;
+  top: 20%;
+  left: 20%;
+  z-index: 999;
+  //	border: 3px solid rgba(255, 255, 255, 0.9);
+  width: 375px;
+  height: 478px;
+  overflow: hidden;
+}
+
+.mobile_back {
+  position: absolute;
+  z-index: 50;
+  width: 540px;
+  height: 1000px;
+  top: 13%;
+  left: 18%;
+  background-image: url("../image/iphone.png");
+  background-repeat: no-repeat;
+  background-size: 461px;
+}
+
+.p_container {
+  width: 280px;
+  height: 478px;
+  overflow: hidden;
+  position: absolute;
+  left: 50px;
+  img {
+    width: auto;
+    height: 478px;
+    object-fit: cover;
+  }
+}
+
+/*양쪽화살표*/
+a.prev {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+}
+
+a.next {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+}
+
+a > img {
+  display: inline-block;
+  width: $wsize;
+}
+
+//.p_wrap {
+//	margin-top: -483px;
+//
+//}
+
+/* 캡션서식 */
+.c_container {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  margin-left: 50px;
+  width: 400px;
+  //	height: 500px;
+  //	border: 3px solid rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  background-color: rgba(150, 221, 217, 0.5);
+  overflow: hidden;
+}
+
+.c_container h3 {
+  font-size: 1.25rem;
+  color: $black;
+  margin: 10px;
+}
+
+.c_container h3 > em {
+  font-size: 0.97rem;
+  color: $yellow;
+  font-weight: 700;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.c_wrap {
+  display: flex;
+  width: $wsize * 5;
+  margin-left: -$wsize;
+}
+
+.song {
+  width: $wsize/5;
+  padding: 10px;
+}
+
+.song a {
+  display: inline;
+  background-color: #000;
+  padding: 3px 15px;
+  color: $white;
+  position: relative;
+  bottom: -10px;
+  left: 200px;
+}
