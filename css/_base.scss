@@ -1,21 +1,21 @@
 $black: #1b1b1b;
+$backgroundBlack: #181818;
 $darkgray: #212121;
-$middarkgray: #272727;
-$lightgray: #d1d1d1;
-$white: #fff;
-$purple: #7f7b96;
-$peach: #b45a42;
+$middarkgray: #2d3436;
+$lightgray: #c4c4c4;
+$white: #e1e1e1;
+
+$gnbRed: #ff5c5c;
 $pink: #bb7f7f;
 $yellow: #c17e27;
-$green: #004547;
-$torquise: #006064;
-$blue: #325b6d;
-$gray20: #231f20;
+$torquise: #004547;
+$darkTorquise: #00363a;
+$lightTouquise: #428e92;
 
 html {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 1rem;
-  color: #fff;
+  color: $white;
   width: 100%;
   height: 100%;
 }

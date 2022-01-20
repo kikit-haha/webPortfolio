@@ -45,7 +45,6 @@
   //진행 바
   window.addEventListener("scroll", (e) => {
     let sTop = window.pageYOffset;
-    // console.log(sTop, "sTop지금스크롤된 양");
     let totalHeight = document.body.offsetHeight - window.innerHeight;
     let sPos = sTop / totalHeight;
     const progressBar = document.querySelector(".progress_bar");

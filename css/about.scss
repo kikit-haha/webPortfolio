@@ -1,0 +1,158 @@
+@charset "utf-8";
+@import "../css/reset";
+@import "../css/base";
+
+section.about {
+  width: 80vw;
+  // height: 100%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20vh;
+  }
+  h3 {
+    color: $lightTouquise;
+  }
+}
+
+.about_01 {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  margin-bottom: 10vh;
+
+  .title_01 {
+    font-size: 1.2rem;
+    position: absolute;
+    // right: 29%;
+    // transform: translateX(50%) translateY(-50%);
+    left: 42%;
+    top: 20px;
+  }
+}
+
+.about_01_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  img {
+    width: 40%;
+    height: 100%;
+  }
+
+  .about_intro {
+    width: 58%;
+    color: $lightgray;
+    line-height: 2em;
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
+.about_02 {
+  width: 100%;
+  line-height: 1.8em;
+  text-align: center;
+
+  .title_02 {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+}
+
+.about_02_list {
+  height: 100%;
+  width: 100%;
+  .list {
+    background-color: $darkTorquise;
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto 100px auto;
+    li {
+      color: $lightgray;
+      margin-bottom: 10px;
+      line-height: 2em;
+    }
+  }
+}
+.list_detail {
+  li {
+    margin-bottom: 50px;
+    text-align: left;
+  }
+  p {
+    margin: 4px 0;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .about_01 {
+    height: 40vh;
+    .title_01 {
+      top: 0;
+    }
+  }
+}
+
+@media screen and(max-width:768px) {
+  section.about {
+    display: block;
+    margin-top: 14vh;
+    h2 {
+      margin-bottom: 10vh;
+      text-align: center;
+    }
+  }
+
+  .about_01 {
+    height: 100vh;
+    margin-bottom: 10vh;
+    .title_01 {
+      position: relative;
+      left: 0;
+      top: 0;
+      transform: none;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .about_01_inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+
+    img {
+      height: auto;
+      width: 90%;
+      margin-bottom: 10vh;
+    }
+    .about_intro {
+      width: 100%;
+      line-height: 1.6em;
+    }
+  }
+
+  .about_02_list {
+    .title_02 {
+      margin-bottom: 20px;
+    }
+    .list {
+      width: 90%;
+      margin: 0 auto 10vh auto;
+      text-align: left;
+
+      li:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

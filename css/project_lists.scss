@@ -51,6 +51,18 @@ section {
   width: 1200vw;
   background: $wallblack;
   transform: rotateY(90deg) translateZ(-600vw);
+
+  position: relative;
+
+  h2 {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $lightgray;
+    font-size: 10vw;
+    margin-right: auto;
+  }
 }
 
 .wall-right {
@@ -67,10 +79,9 @@ article {
   height: 100vh;
   transform-style: preserve-3d;
   transform: translateZ(-490vw);
-  // transform: translateZ(-50vw);
 }
 
-figure.project {
+.project {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
@@ -122,8 +133,11 @@ figure.project {
   box-shadow: 0px 3px 4px rgba(51, 51, 51, 0.616);
   animation: animate_link 1.5s alternate infinite
     cubic-bezier(0.45, 0.05, 0.55, 0.99);
+
   &:hover {
     box-shadow: 0px 3px 4px rgba(223, 223, 223, 0.8);
+    animation: none;
+    transform: translateY(-15px);
   }
   small {
     display: block;
@@ -138,26 +152,6 @@ figure.project {
   to {
     transform: translateY(-30px);
   }
-}
-
-.project01 {
-  transform: translateZ(300vw);
-}
-
-.project02 {
-  transform: translateZ(120vw);
-}
-
-.project03 {
-  transform: translateZ(-60vw);
-}
-
-.project04 {
-  transform: translateZ(-240vw);
-}
-
-.project05 {
-  transform: translateZ(-420vw);
 }
 
 article.introduce01 {
@@ -177,7 +171,7 @@ article.introduce01 {
 
 aside {
   position: fixed;
-  z-index: 9999;
+  z-index: 8000;
   bottom: 30px;
   width: 70px;
   height: 112px;
@@ -210,7 +204,8 @@ footer {
 
 @media screen and (max-width: 768px) {
   body {
-    height: 500vw;
+    height: 500vh;
+    width: 100vw;
     -webkit-overflow-scrolling: touch;
     color: #555;
     transition: 0.5s;
@@ -228,12 +223,33 @@ footer {
   // project 서식
   .wall {
     display: none;
+    z-index: unset;
+  }
+  .wall-left {
+    display: block;
+    width: 90vw;
+    height: 20vh;
+    background-color: transparent;
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 auto;
+    transform: none;
+    h2 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      color: $lightgray;
+      font-size: 8vw;
+      margin-right: auto;
+    }
   }
 
   article {
-    position: relative;
+    position: static;
     left: 0;
     top: 0;
+
     width: 90vw;
     margin: 0 auto;
     height: 100%;
@@ -242,10 +258,10 @@ footer {
     // transform: translateZ(-50vw);
   }
 
-  figure.project {
-    overflow: hidden;
+  .project {
+    overflow: unset;
     width: 100%;
-    height: 60vh;
+    height: 68vh;
     background-color: #000;
 
     transition: 0.3s;
@@ -253,88 +269,65 @@ footer {
     position: relative;
     left: 0;
     top: 0;
-    z-index: 2;
+    z-index: unset;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20vh;
+    margin-bottom: 26vh;
+
     img {
       transition: 0.3s;
 
       object-fit: cover;
       height: 100%;
-      // width: 100%;
+      width: 100%;
     }
   }
 
-  .project figcaption > a {
-    width: 12vw;
-    height: 19vw;
+  .project figcaption {
+    width: 90vw;
+    height: 10vh;
+    position: absolute;
+    left: 0;
+    bottom: -12vh;
+  }
 
-    font-size: 1.6vw;
+  .project figcaption > a {
+    width: 80vw;
+    height: 100%;
+
+    font-size: 5vw;
     line-height: 1.4em;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.404);
     color: $white;
-    border-radius: 30px;
+    border-radius: 16px;
 
-    position: absolute;
-    bottom: 10vh;
-    right: 3vw;
+    position: relative;
+    bottom: 0vh;
+    right: 0vw;
 
     margin: 0 auto;
-    padding: 10px 0.4em;
+    padding: 4px;
 
     transition: 0.5s;
-    display: flex;
-    flex-direction: column;
-    align-items: space-between;
-    justify-content: center;
-    box-shadow: 0px 3px 4px rgba(51, 51, 51, 0.616);
-    animation: animate_link 1.5s alternate infinite
-      cubic-bezier(0.45, 0.05, 0.55, 0.99);
+    animation: none;
+
     &:hover {
       box-shadow: 0px 3px 4px rgba(223, 223, 223, 0.8);
     }
     small {
       display: block;
-      font-size: 1vw;
-      line-height: 1.2em;
+      font-size: 3vw;
+      line-height: 1.4em;
       font-weight: 300;
-      margin-bottom: 1em;
+      margin-bottom: 0.2em;
     }
-  }
-
-  .project01 {
-    transform: translateZ(300vw);
-  }
-
-  .project02 {
-    transform: translateZ(120vw);
-  }
-
-  .project03 {
-    transform: translateZ(-60vw);
-  }
-
-  .project04 {
-    transform: translateZ(-240vw);
-  }
-
-  .project05 {
-    transform: translateZ(-420vw);
-  }
-
-  article.introduce01 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 95vh;
-    background-color: $lightgray;
   }
 
   aside {
     display: none;
+    z-index: unset;
   }
 }

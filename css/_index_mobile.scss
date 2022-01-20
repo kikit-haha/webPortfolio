@@ -1,4 +1,54 @@
 @media screen and (max-width: 768px) {
+  .popup {
+    top: 60px;
+    right: 50%;
+    transform: translateX(50%);
+    box-shadow: none;
+  }
+
+  header {
+    h1 {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  nav.top_menu {
+    display: none;
+  }
+
+  .profile {
+    flex-direction: column;
+    padding-top: 300px;
+    height: 150%;
+    justify-content: flex-start;
+
+    .profile_text {
+      font-size: 1.4rem;
+      height: 28%;
+    }
+
+    .profile_photo {
+      width: 40vw;
+    }
+  }
+
+  .profile {
+    flex-direction: column;
+    padding-top: 300px;
+    height: 150%;
+    justify-content: flex-start;
+
+    .profile_text {
+      font-size: 1.4rem;
+      height: 28%;
+    }
+
+    .profile_photo {
+      width: 40vw;
+    }
+  }
+
   .introduce {
     .intro {
       font-size: 2rem;
@@ -54,12 +104,18 @@
     top: 20px;
   }
 
-  figure.project {
-    position: relative;
+  .project_wrap {
+    height: 500vh;
+    padding-bottom: 20vh;
+  }
 
+  figure.project {
+    width: 100vw;
+    height: 50vh;
+    transform: rotateX(0deg) rotateY(0deg);
     img {
       height: 80%;
-      width: 100%;
+      width: 100vw;
     }
   }
 
@@ -78,14 +134,16 @@
     }
   }
 
-  .project01,
-  .project02,
-  .project03,
-  .project04,
-  .project05 {
-    left: 0;
-    width: 100vw;
+  .project_01,
+  .project_02,
+  .project_03,
+  .project_04,
+  .project_05,
+  .project_06 {
     top: 60px;
-    margin-bottom: 100px;
+    left: 0;
+
+    width: 100vw;
+    // margin-bottom: 100px;
   }
 }

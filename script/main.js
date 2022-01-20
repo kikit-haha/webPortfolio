@@ -1,5 +1,7 @@
 (function () {
   const body = document.querySelector("body");
+  let width = window.innerWidth;
+  let height = window.innerHeight;
   const header = document.querySelector("header");
   const section = document.querySelector("section");
 
@@ -7,12 +9,25 @@
   const introduceWrap = document.querySelector(".introduce_wrap");
   const introduce = document.querySelector(".introduce");
   const introContent = document.querySelectorAll(".intro");
+
+  const projectWrap = document.querySelector(".project_wrap");
+  console.log(projectWrap, ": projectWrap");
   const projectContent = document.querySelectorAll("figure.project");
 
   const IntroductionWrap = document.querySelector(".introduce_wrap");
 
+  console.log("conected");
+  const projects = [
+    { name: "JEJU SHINWHA WORLD", left: 0, top: 0 },
+    { name: "PAPA JOHNS", left: 0, top: 0 },
+    { name: "COLDPLAY", left: 0, top: 0 },
+    { name: "JO MALONE", left: 0, top: 0 },
+    { name: "BLACKYAK", left: 0, top: 0 },
+    { name: "CARROT GAME", left: 0, top: 0 },
+  ];
   // 메인페이지 스크립트
-
+  settingProjectPos();
+  getWindowSize();
   //팝업창
 
   const popup = document.createElement("div");
@@ -45,7 +60,11 @@
 
     projectContent.forEach((project) => {
       project.style.transform =
-        "rotateY(" + mousePos.x * 2 + "deg) rotateX(" + mousePos.y * 2 + "deg)";
+        "rotateY(" +
+        mousePos.x * 1.2 +
+        "deg) rotateX(" +
+        mousePos.y * 1.2 +
+        "deg)";
     });
   });
 
@@ -146,10 +165,42 @@
 
   window.addEventListener("resize", () => {
     height = window.innerHeight;
-    console.log(height, ": height");
     width = window.innerWidth;
     getWindowSize();
+    settingProjectPos();
   });
 
-  getWindowSize();
+  function settingProjectPos() {
+    const projectNum = projects.length;
+    const topGap = parseInt(100 / projectNum);
+
+    calcPos(topGap);
+
+    projectContent.forEach((elem, i) => {
+      elem.style.top = `${projects[i].top}%`;
+      if (width <= 768) {
+        elem.style.left = "0px";
+        elem.style.right = "0px";
+      } else {
+        if (i % 2 === 0) {
+          elem.style.left = "6%";
+        } else {
+          elem.style.right = "7%";
+        }
+      }
+    });
+  }
+
+  function calcPos(topGap) {
+    let gap = 6;
+
+    projects.map((elem, i) => {
+      if (i === 0) {
+        elem.top = gap;
+        return;
+      }
+
+      elem.top = gap += topGap;
+    });
+  }
 })();

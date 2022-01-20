@@ -145,7 +145,158 @@ table {
 html {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 1rem;
-  color: #fff;
+  color: #e1e1e1;
+  width: 100%;
+  height: 100%;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  color: #e1e1e1;
   width: 100%;
   height: 100%;
 }
@@ -156,43 +307,29 @@ body {
 }
 
 /*헤더영역 서식 시작*/
-header {
-  width: 100%;
-  background-color: #181818;
-}
-
-header h1 {
-  width: 160px;
-  height: 160px;
+h1.logo {
   position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 9999;
+  left: 0;
+  top: 0;
+  z-index: 8000;
+  width: 140px;
+  height: 140px;
 }
 
-header h1 img {
+h1.logo a {
   width: 100%;
+  height: 100%;
+  display: block;
 }
 
-p.header_introduce {
-  font-size: 1.6rem;
-  width: 30vw;
-  width: 100vw;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+h1.logo img {
+  width: 100%;
+  height: 100%;
 }
 
 .status {
   background-color: #4973fd;
-  color: #fff;
+  color: #e1e1e1;
   width: 100px;
   height: 30px;
   position: fixed;
@@ -206,7 +343,7 @@ p.header_introduce {
   height: 100px;
   position: fixed;
   top: 50%;
-  right: 10px;
+  right: 2vw;
   z-index: 9999;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -221,14 +358,14 @@ p.header_introduce {
 
 .bar01 {
   width: 50px;
-  background-color: #d1d1d1;
+  background-color: #e1e1e1;
   top: 30%;
   right: 0;
 }
 
 .bar02 {
   width: 70px;
-  background-color: #d1d1d1;
+  background-color: #e1e1e1;
   top: 50%;
   right: 0;
 }
@@ -267,12 +404,12 @@ p.header_introduce {
 .gnb_wrap {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(33, 33, 33, 0.71);
+  background-color: rgba(27, 27, 27, 0.9);
   position: fixed;
   -webkit-transform: translateX(100vw);
           transform: translateX(100vw);
   top: 0;
-  z-index: 9000;
+  z-index: 9900;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -288,6 +425,7 @@ p.header_introduce {
   right: 0;
   width: 60vw;
   height: 100vh;
+  z-index: 9901;
   background-color: #ff5c5c;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -313,10 +451,10 @@ p.header_introduce {
 
 .gnb a {
   width: 100%;
-  padding-left: 10%;
+  padding-left: 16%;
   text-transform: uppercase;
   font-size: 3rem;
-  line-height: 1.8em;
+  line-height: 2em;
   display: block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -336,13 +474,13 @@ p.header_introduce {
 .gnb a.inactive {
   font-size: 2rem;
   line-height: 1.6em;
-  color: #d1d1d1;
+  color: #c4c4c4;
 }
 
 .gnb a.inactive::before {
   width: 150px;
   margin: 0 10px 3% 0;
-  background-color: #d1d1d1;
+  background-color: #c4c4c4;
 }
 
 .gnb a.active {
@@ -388,10 +526,10 @@ p.header_introduce {
 .profile .profile_text {
   width: 35vw;
   height: 20%;
-  font-size: 2.5rem;
+  font-size: 3vw;
   font-weight: 700;
   line-height: 1.8em;
-  color: #d1d1d1;
+  color: #c4c4c4;
 }
 
 .profile .profile_name {
@@ -403,9 +541,9 @@ p.header_introduce {
   width: 40px;
   height: 40px;
   position: fixed;
-  bottom: 0px;
-  left: 40px;
-  z-index: 9999;
+  bottom: 0;
+  left: 2vw;
+  z-index: 9900;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -444,7 +582,7 @@ p.header_introduce {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: #d1d1d1;
+  background-color: #c4c4c4;
   opacity: 1;
 }
 
@@ -454,7 +592,7 @@ p.header_introduce {
   height: 100%;
   left: 50%;
   top: 0;
-  background-color: #d1d1d1;
+  background-color: #c4c4c4;
 }
 
 .more_btn.active:hover {
@@ -463,7 +601,7 @@ p.header_introduce {
 }
 
 .more_btn.active .more_bar {
-  background-color: #fff;
+  background-color: #e1e1e1;
 }
 
 .more_btn.active .more_bar_top {
@@ -516,14 +654,14 @@ p.header_introduce {
 }
 
 .menu ul li {
-  width: 24%;
+  width: 30%;
   height: 40px;
 }
 
 .menu ul li > a {
   text-transform: uppercase;
   width: 100%;
-  color: #fff;
+  color: #e1e1e1;
   -webkit-transition: 0.1s;
   transition: 0.1s;
   display: block;
@@ -534,18 +672,19 @@ p.header_introduce {
 }
 
 .menu ul li > a:hover {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 /*오른쪽 상단 메뉴*/
 nav.top_menu {
   position: absolute;
   width: 160px;
-  height: 160px;
+  height: 140px;
+  z-index: 7000;
   top: 0px;
   right: 0px;
   padding: 0px;
-  background-color: #006064;
+  background-color: #004547;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -557,8 +696,20 @@ nav.top_menu {
           align-items: center;
 }
 
+nav.top_menu ul {
+  width: 100%;
+  text-align: center;
+}
+
+nav.top_menu li {
+  width: 100%;
+}
+
 nav.top_menu a {
-  color: #fff;
+  display: block;
+  color: #e1e1e1;
+  width: 100%;
+  height: 100%;
   font-size: 1.4rem;
   text-transform: uppercase;
   line-height: 1.6em;
@@ -567,110 +718,105 @@ nav.top_menu a {
 /* 진행 바 서식*/
 .progress {
   position: fixed;
-  left: 60px;
+  left: calc(2vw + 20px);
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  z-index: 100;
   width: 1px;
   height: 230px;
-  background-color: #808080;
+  background-color: #2d3436;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 9000;
 }
 
 .progress .progress_bar {
   position: absolute;
-  background-color: #ff7e7e;
+  background-color: #ff5c5c;
   width: 1px;
   height: 0px;
-  z-index: 9999;
+  z-index: 200;
 }
 
 /*푸터영역 서식 시작*/
 footer {
   width: 100%;
-  height: 5vh;
+  height: 40px;
   background-color: #212121;
-  line-height: 5vh;
+  color: #c4c4c4;
+  line-height: 40px;
   text-align: right;
   font-size: 0.8rem;
-  padding-right: 20px;
+  margin-top: 200px;
+}
+
+footer address {
+  padding-right: 2vw;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  h1.logo {
+    width: 100px;
+    height: 100px;
+  }
+  nav.top_menu {
+    height: 100px;
+  }
+  nav.top_menu a {
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  header h1 {
-    width: 45px;
-    height: 45px;
+  h1.logo {
+    width: 60px;
+    height: 60px;
   }
   nav.top_menu {
     display: none;
   }
-  .profile {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-top: 300px;
-    height: 150%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+  .menu.active {
+    padding: 0;
   }
-  .profile .profile_text {
-    font-size: 1.4rem;
-    height: 28%;
+  .menu ul {
+    margin: 0 auto;
+    width: 82%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  .profile .profile_photo {
-    width: 40vw;
+  .menu ul li > a {
+    font-size: 1rem;
   }
-  .profile {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-top: 300px;
-    height: 150%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  .profile .profile_text {
-    font-size: 1.4rem;
-    height: 28%;
-  }
-  .profile .profile_photo {
-    width: 40vw;
+  .menu ul li > a:active {
+    font-size: 1.2rem;
   }
   .gnb a {
-    font-size: 2rem;
+    font-size: 1.3rem;
+    line-height: 2.8rem;
+    height: 2.8em;
   }
   .gnb a.active {
-    font-size: 2.3rem;
-  }
-  .popup {
-    right: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  .more_btn {
-    display: none;
+    font-size: 1.4rem;
   }
   .progress {
     display: none;
   }
   .toggle {
-    top: 90vh;
-    right: 10px;
-    width: 50px;
-    height: 50px;
+    top: 2vw;
+    right: 2vw;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     padding: 10px;
-    background-color: rgba(139, 139, 139, 0.25);
+    background-color: rgba(87, 101, 116, 0.6);
     cursor: pointer;
   }
   .bar01 {
@@ -753,6 +899,18 @@ section {
   background: #1d1d1dcc;
   -webkit-transform: rotateY(90deg) translateZ(-600vw);
           transform: rotateY(90deg) translateZ(-600vw);
+  position: relative;
+}
+
+.wall-left h2 {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #c4c4c4;
+  font-size: 10vw;
+  margin-right: auto;
 }
 
 .wall-right {
@@ -774,7 +932,7 @@ article {
           transform: translateZ(-490vw);
 }
 
-figure.project {
+.project {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
@@ -796,7 +954,7 @@ figure.project {
           align-items: center;
 }
 
-figure.project img {
+.project img {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -o-object-fit: cover;
@@ -811,7 +969,7 @@ figure.project img {
   line-height: 1.4em;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.404);
-  color: #fff;
+  color: #e1e1e1;
   border-radius: 30px;
   position: absolute;
   bottom: 10vh;
@@ -842,6 +1000,10 @@ figure.project img {
 .project figcaption > a:hover {
   -webkit-box-shadow: 0px 3px 4px rgba(223, 223, 223, 0.8);
           box-shadow: 0px 3px 4px rgba(223, 223, 223, 0.8);
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
 }
 
 .project figcaption > a small {
@@ -866,31 +1028,6 @@ figure.project img {
   }
 }
 
-.project01 {
-  -webkit-transform: translateZ(300vw);
-          transform: translateZ(300vw);
-}
-
-.project02 {
-  -webkit-transform: translateZ(120vw);
-          transform: translateZ(120vw);
-}
-
-.project03 {
-  -webkit-transform: translateZ(-60vw);
-          transform: translateZ(-60vw);
-}
-
-.project04 {
-  -webkit-transform: translateZ(-240vw);
-          transform: translateZ(-240vw);
-}
-
-.project05 {
-  -webkit-transform: translateZ(-420vw);
-          transform: translateZ(-420vw);
-}
-
 article.introduce01 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -902,7 +1039,7 @@ article.introduce01 {
       -ms-flex-align: center;
           align-items: center;
   height: 95vh;
-  background-color: #d1d1d1;
+  background-color: #c4c4c4;
 }
 
 @-webkit-keyframes scroll_btn {
@@ -923,7 +1060,7 @@ article.introduce01 {
 
 aside {
   position: fixed;
-  z-index: 9999;
+  z-index: 8000;
   bottom: 30px;
   width: 70px;
   height: 112px;
@@ -958,7 +1095,8 @@ footer {
 
 @media screen and (max-width: 768px) {
   body {
-    height: 500vw;
+    height: 500vh;
+    width: 100vw;
     -webkit-overflow-scrolling: touch;
     color: #555;
     -webkit-transition: 0.5s;
@@ -975,9 +1113,31 @@ footer {
   }
   .wall {
     display: none;
+    z-index: unset;
+  }
+  .wall-left {
+    display: block;
+    width: 90vw;
+    height: 20vh;
+    background-color: transparent;
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 auto;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .wall-left h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+            transform: translateY(-50%) translateX(-50%);
+    color: #c4c4c4;
+    font-size: 8vw;
+    margin-right: auto;
   }
   article {
-    position: relative;
+    position: static;
     left: 0;
     top: 0;
     width: 90vw;
@@ -988,17 +1148,17 @@ footer {
     -webkit-transform: translateZ(0vw);
             transform: translateZ(0vw);
   }
-  figure.project {
-    overflow: hidden;
+  .project {
+    overflow: unset;
     width: 100%;
-    height: 60vh;
+    height: 68vh;
     background-color: #000;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     position: relative;
     left: 0;
     top: 0;
-    z-index: 2;
+    z-index: unset;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1008,48 +1168,41 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 20vh;
+    margin-bottom: 26vh;
   }
-  figure.project img {
+  .project img {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     -o-object-fit: cover;
        object-fit: cover;
     height: 100%;
+    width: 100%;
+  }
+  .project figcaption {
+    width: 90vw;
+    height: 10vh;
+    position: absolute;
+    left: 0;
+    bottom: -12vh;
   }
   .project figcaption > a {
-    width: 12vw;
-    height: 19vw;
-    font-size: 1.6vw;
+    width: 80vw;
+    height: 100%;
+    font-size: 5vw;
     line-height: 1.4em;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.404);
-    color: #fff;
-    border-radius: 30px;
-    position: absolute;
-    bottom: 10vh;
-    right: 3vw;
+    color: #e1e1e1;
+    border-radius: 16px;
+    position: relative;
+    bottom: 0vh;
+    right: 0vw;
     margin: 0 auto;
-    padding: 10px 0.4em;
+    padding: 4px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: space-between;
-        -ms-flex-align: space-between;
-            align-items: space-between;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-shadow: 0px 3px 4px rgba(51, 51, 51, 0.616);
-            box-shadow: 0px 3px 4px rgba(51, 51, 51, 0.616);
-    -webkit-animation: animate_link 1.5s alternate infinite cubic-bezier(0.45, 0.05, 0.55, 0.99);
-            animation: animate_link 1.5s alternate infinite cubic-bezier(0.45, 0.05, 0.55, 0.99);
+    -webkit-animation: none;
+            animation: none;
   }
   .project figcaption > a:hover {
     -webkit-box-shadow: 0px 3px 4px rgba(223, 223, 223, 0.8);
@@ -1057,46 +1210,14 @@ footer {
   }
   .project figcaption > a small {
     display: block;
-    font-size: 1vw;
-    line-height: 1.2em;
+    font-size: 3vw;
+    line-height: 1.4em;
     font-weight: 300;
-    margin-bottom: 1em;
-  }
-  .project01 {
-    -webkit-transform: translateZ(300vw);
-            transform: translateZ(300vw);
-  }
-  .project02 {
-    -webkit-transform: translateZ(120vw);
-            transform: translateZ(120vw);
-  }
-  .project03 {
-    -webkit-transform: translateZ(-60vw);
-            transform: translateZ(-60vw);
-  }
-  .project04 {
-    -webkit-transform: translateZ(-240vw);
-            transform: translateZ(-240vw);
-  }
-  .project05 {
-    -webkit-transform: translateZ(-420vw);
-            transform: translateZ(-420vw);
-  }
-  article.introduce01 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 95vh;
-    background-color: #d1d1d1;
+    margin-bottom: 0.2em;
   }
   aside {
     display: none;
+    z-index: unset;
   }
 }
 /*# sourceMappingURL=project_lists.css.map */

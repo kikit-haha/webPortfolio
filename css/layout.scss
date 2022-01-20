@@ -1,0 +1,510 @@
+@charset "utf-8";
+@import "reset";
+@import "base";
+
+body {
+  background-color: $darkgray;
+  overflow-x: hidden;
+}
+
+/*헤더영역 서식 시작*/
+h1.logo {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 8000;
+  width: 140px;
+  height: 140px;
+  a {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.status {
+  background-color: #4973fd;
+  color: $white;
+  width: 100px;
+  height: 30px;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+/*토글버튼 서식*/
+.toggle {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+
+  top: 50%;
+  right: 2vw;
+  z-index: 9999;
+  transition: 0.5s;
+}
+
+.bar {
+  position: absolute;
+  height: 1px;
+  transition: 0.3s;
+}
+
+.bar01 {
+  width: 50px;
+  background-color: $white;
+  top: 30%;
+  right: 0;
+}
+
+.bar02 {
+  width: 70px;
+  background-color: $white;
+  top: 50%;
+  right: 0;
+}
+
+.toggle:hover .bar {
+  width: 60px;
+}
+
+.toggle.active {
+  transition: 0.5s;
+}
+
+.toggle.active:hover .bar01 {
+  width: 90px;
+  transform: rotate(0deg) !important;
+}
+
+.toggle.active:hover .bar02 {
+  display: none;
+}
+
+.toggle.active .bar02 {
+  width: 60px;
+  transform: rotate(-45deg) translateY(-14px);
+}
+
+.toggle.active .bar01 {
+  width: 60px;
+  transform: rotate(45deg) translateY(14px);
+}
+
+.gnb_wrap {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(27, 27, 27, 0.9);
+
+  position: fixed;
+  transform: translateX(100vw);
+  top: 0;
+  z-index: 9900;
+  transition: 0.5s;
+
+  &.act {
+    transform: translateX(0);
+  }
+}
+
+.gnb {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 60vw;
+  height: 100vh;
+  z-index: 9901;
+  background-color: $gnbRed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    width: 100%;
+  }
+
+  li {
+    display: flex;
+    width: 100%;
+  }
+
+  a {
+    width: 100%;
+    padding-left: 16%;
+
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 2em;
+    display: block;
+    transition: 0.5s;
+    color: $darkgray;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      // position: absolute;
+
+      width: 20%;
+      height: 1px;
+      background-color: $black;
+      margin: 0 10px 3% 0;
+    }
+
+    &.inactive {
+      font-size: 2rem;
+      line-height: 1.6em;
+      color: $lightgray;
+    }
+
+    &.inactive::before {
+      width: 150px;
+      margin: 0 10px 3% 0;
+      background-color: $lightgray;
+    }
+
+    &.active {
+      font-size: 4rem;
+      line-height: 1.8em;
+      color: #000000;
+    }
+
+    &.active::before {
+      // width: 230px;
+      width: 25%;
+      height: 1px;
+      background-color: #000000;
+    }
+  }
+}
+
+/*프로필 이미지 서식*/
+.profile {
+  position: absolute;
+  width: 60vw;
+  height: 100%;
+  top: 50%;
+  left: 20vw;
+  transform: translateY(-50%);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .profile_photo {
+    width: 20vw;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .profile_text {
+    width: 35vw;
+    height: 20%;
+    font-size: 3vw;
+    font-weight: 700;
+    line-height: 1.8em;
+    color: $lightgray;
+  }
+  .profile_name {
+    color: #ffc672;
+  }
+}
+
+/* 하단 더보기 버튼 */
+.more_btn {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  //	position: absolute;
+  bottom: 0;
+  left: 2vw;
+  z-index: 9900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+@keyframes rotate_more_btn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.more_btn:hover {
+  animation: rotate_more_btn 4s linear infinite;
+}
+
+.more_bar_top {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: $lightgray;
+  opacity: 1;
+}
+
+.more_bar_bottom {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  background-color: $lightgray;
+}
+
+//하단 더보기 버튼 액티브 클래스 추가 후
+.more_btn.active:hover {
+  animation: rotate_more_btn 6s linear infinite;
+}
+
+.more_btn.active .more_bar {
+  background-color: $white;
+}
+
+.more_btn.active .more_bar_top {
+  opacity: 0;
+}
+
+.more_btn.active .more_bar_bottom {
+  transform: rotate(90deg);
+}
+
+.menu {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  padding-left: 0px;
+  width: 0vw;
+  height: 40px;
+  background-color: rgba(31, 31, 31, 0.9);
+  font-size: 40px;
+
+  transition: 0.5s;
+  overflow: hidden;
+  z-index: 9000;
+
+  &.active {
+    padding-left: 120px;
+    width: 100vw;
+  }
+
+  &.active a {
+    opacity: 1;
+  }
+
+  ul {
+    display: flex;
+    width: 100%;
+    height: 2.4rem;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    //		display: none;
+    li {
+      width: 30%;
+      height: 40px;
+    }
+
+    li > a {
+      text-transform: uppercase;
+      width: 100%;
+      color: $white;
+      transition: 0.1s;
+      display: block;
+      line-height: 40px;
+      text-align: center;
+      opacity: 0;
+      font-size: 1.4rem;
+    }
+
+    li > a:hover {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+/*오른쪽 상단 메뉴*/
+nav.top_menu {
+  position: absolute;
+  width: 160px;
+  height: 140px;
+  z-index: 7000;
+
+  top: 0px;
+  right: 0px;
+
+  padding: 0px;
+  background-color: $torquise;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ul {
+    width: 100%;
+    text-align: center;
+  }
+  li {
+    width: 100%;
+  }
+  a {
+    display: block;
+    color: $white;
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    line-height: 1.6em;
+  }
+}
+
+/* 진행 바 서식*/
+.progress {
+  position: fixed;
+  left: calc(2vw + 20px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  width: 1px;
+  height: 230px;
+  background-color: $middarkgray;
+  display: flex;
+  justify-content: center;
+
+  .progress_bar {
+    position: absolute;
+    background-color: $gnbRed;
+    width: 1px;
+    height: 0px;
+    z-index: 200;
+  }
+}
+
+/*푸터영역 서식 시작*/
+footer {
+  width: 100%;
+  height: 40px;
+  background-color: $darkgray;
+  color: $lightgray;
+  line-height: 40px;
+  text-align: right;
+
+  font-size: 0.8rem;
+
+  margin-top: 200px;
+  address {
+    padding-right: 2vw;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  h1.logo {
+    width: 100px;
+    height: 100px;
+  }
+  nav.top_menu {
+    height: 100px;
+    a {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1.logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  nav.top_menu {
+    display: none;
+  }
+
+  .menu {
+    &.active {
+      padding: 0;
+    }
+    ul {
+      margin: 0 auto;
+      width: 82%;
+      justify-content: space-between;
+
+      li > a {
+        font-size: 1rem;
+      }
+      li > a:active {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .gnb {
+    a {
+      font-size: 1.3rem;
+      line-height: 2.8rem;
+      height: 2.8em;
+      &.active {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .progress {
+    display: none;
+  }
+
+  .toggle {
+    top: 2vw;
+    right: 2vw;
+
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    padding: 10px;
+
+    background-color: rgba(87, 101, 116, 0.6);
+    cursor: pointer;
+  }
+  .bar01 {
+    width: 20px;
+    right: calc(40% - 10px);
+    top: 40%;
+  }
+
+  .bar02 {
+    width: 30px;
+    right: calc(40% - 10px);
+    top: 60%;
+  }
+
+  .toggle:hover .bar {
+    width: 30px;
+  }
+
+  .toggle.active:hover .bar01 {
+    width: 30px;
+    transform: rotate(0deg) !important;
+    top: 50%;
+  }
+
+  .toggle.active .bar01 {
+    width: 30px;
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+
+  .toggle.active .bar02 {
+    width: 30px;
+    transform: rotate(-45deg) translate(2px, -4px);
+  }
+}

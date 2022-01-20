@@ -1,0 +1,320 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  color: #e1e1e1;
+  width: 100%;
+  height: 100%;
+}
+
+section.about {
+  width: 80vw;
+  margin: 100px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20vh;
+}
+
+section.about h3 {
+  color: #428e92;
+}
+
+.about_01 {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  margin-bottom: 10vh;
+}
+
+.about_01 .title_01 {
+  font-size: 1.2rem;
+  position: absolute;
+  left: 42%;
+  top: 20px;
+}
+
+.about_01_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.about_01_inner img {
+  width: 40%;
+  height: 100%;
+}
+
+.about_01_inner .about_intro {
+  width: 58%;
+  color: #c4c4c4;
+  line-height: 2em;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.about_02 {
+  width: 100%;
+  line-height: 1.8em;
+  text-align: center;
+}
+
+.about_02 .title_02 {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.about_02_list {
+  height: 100%;
+  width: 100%;
+}
+
+.about_02_list .list {
+  background-color: #00363a;
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto 100px auto;
+}
+
+.about_02_list .list li {
+  color: #c4c4c4;
+  margin-bottom: 10px;
+  line-height: 2em;
+}
+
+.list_detail li {
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.list_detail p {
+  margin: 4px 0;
+  text-align: left;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .about_01 {
+    height: 40vh;
+  }
+  .about_01 .title_01 {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.about {
+    display: block;
+    margin-top: 14vh;
+  }
+  section.about h2 {
+    margin-bottom: 10vh;
+    text-align: center;
+  }
+  .about_01 {
+    height: 100vh;
+    margin-bottom: 10vh;
+  }
+  .about_01 .title_01 {
+    position: relative;
+    left: 0;
+    top: 0;
+    -webkit-transform: none;
+            transform: none;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .about_01_inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: auto;
+  }
+  .about_01_inner img {
+    height: auto;
+    width: 90%;
+    margin-bottom: 10vh;
+  }
+  .about_01_inner .about_intro {
+    width: 100%;
+    line-height: 1.6em;
+  }
+  .about_02_list .title_02 {
+    margin-bottom: 20px;
+  }
+  .about_02_list .list {
+    width: 90%;
+    margin: 0 auto 10vh auto;
+    text-align: left;
+  }
+  .about_02_list .list li:last-child {
+    margin-bottom: 0;
+  }
+}
+/*# sourceMappingURL=about.css.map */

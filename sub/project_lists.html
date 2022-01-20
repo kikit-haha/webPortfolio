@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Project lists</title>
+    <title>Project Lists - HYEON JEONG 웹 프론트엔드 개발자 포트폴리오</title>
+    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../image/favicon.ico" type="image/x-icon" />
     <!--	폰트삽입-->
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <!--  메인 css서식  -->
-    <link rel="stylesheet" href="../css/project_lists.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/project_lists.css" />
 
     <script defer src="../script/layout.js"></script>
     <script defer src="../script/project_lists.js"></script>
@@ -22,7 +24,7 @@
   <body>
     <!--헤더영역 시작-->
     <header>
-      <h1>
+      <h1 class="logo">
         <a href="../index.html" title="메인페이지로 이동">
           <img src="../image/logo.png" alt="로고" />
         </a>
@@ -39,8 +41,8 @@
             <li>
               <a href="./project_lists.html" title="프로젝트 리스트">project</a>
             </li>
-            <li><a href="#" title="">about</a></li>
-            <li><a href="#" title="">contact</a></li>
+            <li><a href="./about.html" title="">about</a></li>
+            <li><a href="./contact.html" title="">contact</a></li>
           </ul>
         </nav>
       </div>
@@ -53,8 +55,12 @@
       <div class="menu">
         <ul>
           <li><a href="#" title="">resume</a></li>
-          <li><a href="#" title="">contact</a></li>
-          <li><a href="#" title="">instagram</a></li>
+          <li><a href="./contact.html" title="">contact</a></li>
+          <li>
+            <a href="https://www.instagram.com/kikit_kaka/" title=""
+              >instagram</a
+            >
+          </li>
         </ul>
       </div>
       <div class="profile">
@@ -64,10 +70,12 @@
         <nav class="gnb">
           <ul>
             <li>
-              <a href="./project_lists.html" title="프로젝트 리스트">project</a>
+              <a href="./project_lists.html" title="프로젝트 리스트"
+                >projects</a
+              >
             </li>
-            <li><a href="#" title="">about</a></li>
-            <li><a href="#" title="">contact</a></li>
+            <li><a href="./about.html" title="">about</a></li>
+            <li><a href="./contact.html" title="">contact</a></li>
           </ul>
         </nav>
       </div>
@@ -78,65 +86,73 @@
 
     <section>
       <article class="project_wrap">
-        <div class="wall wall-left"></div>
+        <div class="wall wall-left">
+          <h2 class="project-title">Projects</h2>
+        </div>
         <div class="wall wall-right"></div>
 
-        <figure class="project project01">
-          <img src="../image/mockup_01_03.jpg" alt="블랙아크 웹페이지 목업" />
+        <figure class="project project06">
+          <img src="../image/mockup_06.png" alt="당근게임 목업" />
           <figcaption>
-            <a href="./project01.html" title="블랙야크"
-              ><small>Adaptive Web, <br />2020</small>BLACKYAK
+            <a href="../sub/project_06.html" title="당근게임"
+              ><small>Responsive Web, <br />2021</small>Carrot Game
             </a>
           </figcaption>
         </figure>
 
-        <figure class="project project02">
-          <img src="../image/mockup_02_2.jpg" alt="포트폴리오1" />
+        <figure class="project project05">
+          <img src="../image/mockup_05.jpg" alt="블랙아크 웹페이지 목업" />
           <figcaption>
-            <a
-              href="
-                    http://kikithaha.dothome.co.kr/jomalone/"
-              target="_blank"
+            <a href="../sub/project_05.html" title="블랙야크"
+              ><small>Adaptive Web, <br />2020</small>BLACKNOOK
+            </a>
+          </figcaption>
+        </figure>
+
+        <figure class="project project04">
+          <img src="../image/mockup_04.jpg" alt="포트폴리오1" />
+          <figcaption>
+            <a href="../sub/project_04.html"
               ><small
                 >PC Web,<br />
                 2020</small
-              >JO MALONE</a
+              >JO MAILO</a
             >
           </figcaption>
         </figure>
 
         <figure class="project project03">
-          <img src="../image/mockup_03_03.jpg" alt="포트폴리오1" />
+          <img src="../image/mockup_03.jpg" alt="포트폴리오1" />
           <figcaption>
-            <a href="http://kikithaha.dothome.co.kr/coldplay/" target="_blank"
+            <a href="../sub/project_03.html"
               ><small
                 >PC Web,<br />
                 2020</small
-              >COLDPLAY</a
+              >GOLDFLY</a
             >
           </figcaption>
         </figure>
 
-        <figure class="project project04">
-          <img src="../image/mockup_04_1.jpg" alt="포트폴리오1" />
+        <figure class="project project02">
+          <img src="../image/mockup_02.jpg" alt="포트폴리오1" />
           <figcaption>
-            <a href="http://kikithaha.dothome.co.kr/papaJohns/" target="_blank"
+            <a href="../sub/project_02.html"
               ><small
                 >Mobile Web,<br />
                 2020</small
-              >PAPA JOHNS</a
+              >PAPA NOHS</a
             >
           </figcaption>
         </figure>
 
-        <figure class="project project05">
-          <img src="../image/mockup_05_01.jpg" alt="포트폴리오1" />
+        <figure class="project project01">
+          <img src="../image/mockup_01.jpg" alt="포트폴리오1" />
           <figcaption>
-            <a href="http://kikithaha.dothome.co.kr/shinhwa/" target="_blank"
+            <a href="../sub/project_01.html"
               ><small
                 >PC Web,<br />
                 2020</small
-              >JEJU SHINWHA WORLD</a
+              >JEJU SHINLA WORLD</a
             >
           </figcaption>
         </figure>

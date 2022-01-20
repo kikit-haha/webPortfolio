@@ -1,0 +1,16 @@
+@charset "utf-8";
+@import "reset";
+@import "base";
+@import "project_layout";
+
+.cont_title {
+  background-color: #7c7d9b;
+}
+
+.cont {
+  background-color: #a5a8b7;
+}
+
+.cont.detail {
+  background: none;
+}

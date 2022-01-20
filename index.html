@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>HYEON JEONG</title>
+    <title>HYEON JEONG 웹 프론트엔드 개발자 포트폴리오</title>
     <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="./image/favicon.ico" type="image/x-icon" />
     <!--	폰트삽입-->
@@ -15,10 +14,11 @@
       rel="stylesheet"
     />
     <!--  메인 css서식  -->
-    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="./css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
 
-    <script src="script/layout.js" defer></script>
-    <script src="script/main.js" defer></script>
+    <script src="./script/layout.js" defer></script>
+    <script src="./script/main.js" defer></script>
   </head>
 
   <body>
@@ -26,7 +26,7 @@
 
     <header>
       <!--        <div class="status"></div>-->
-      <h1>
+      <h1 class="logo">
         <a href="index.html" title="메인페이지로 이동">
           <img src="./image/logo.png" alt="로고" />
         </a>
@@ -46,8 +46,8 @@
               <i class="user"></i>
             </a>
           </li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a href="./sub/about.html">about</a></li>
+          <li><a href="./sub/contact.html">contact</a></li>
         </ul>
       </nav>
 
@@ -60,8 +60,8 @@
       <!-- 오른쪽메뉴 -->
       <div class="menu">
         <ul>
-          <li><a href="#">about</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a href="./sub/about.html">about</a></li>
+          <li><a href="./sub/contact.html">contact</a></li>
           <li>
             <a
               href="https://www.instagram.com/kikit_kaka/"
@@ -71,9 +71,9 @@
           </li>
         </ul>
       </div>
-      <p class="header_introduce">
-        <img src="" alt="" />
-      </p>
+
+      <p class="header_introduce"></p>
+
       <div class="profile">
         <div class="profile_text">
           안녕하세요 <br />꾸준히 성장하는 개발자<br /><span
@@ -92,11 +92,11 @@
           <ul>
             <li>
               <a href="./sub/project_lists.html" title="프로젝트 리스트"
-                >project</a
+                >projects</a
               >
             </li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">contact</a></li>
+            <li><a href="./sub/about.html">about</a></li>
+            <li><a href="./sub/contact.html">contact</a></li>
           </ul>
         </nav>
       </div>
@@ -112,7 +112,8 @@
         <div class="introduce">
           <div class="intro intro_00">안녕하세요</div>
           <div class="intro intro_01">
-            성장하는 웹 퍼블리셔 &amp; 프론트엔드 개발자
+            성장하는 웹 퍼블리셔 &amp;<br />
+            프론트엔드 개발자
           </div>
           <div class="intro intro_02">좋아서 하는 사람</div>
           <div class="intro intro_03">노현정 입니다</div>
@@ -160,47 +161,62 @@
       <article class="project_wrap">
         <h2>PROJECTS</h2>
 
-        <figure class="project project01">
-          <img src="./image/mockup_01_03.jpg" alt="포트폴리오1" />
+        <figure class="project project_06">
+          <img src="./image/mockup_06.png" alt="포트폴리오1" />
           <figcaption>
-            <a href="./sub/project01.html" title="블랙야크 소개페이지 바로가기">
-              <div><small>Adaptive Web, 2020</small>BLACKYAK</div>
+            <a
+              href="./sub/project_06.html"
+              title="당근게임 소개페이지 바로가기"
+            >
+              <div><small>Responsive Web, 2021</small>CARROT GAME</div>
             </a>
           </figcaption>
         </figure>
 
-        <figure class="project project02">
-          <img src="./image/mockup_02_2.jpg" alt="포트폴리오1" />
+        <figure class="project project_05">
+          <img src="./image/mockup_05.jpg" alt="포트폴리오1" />
           <figcaption>
-            <a href="./sub/project02.html">
-              <div><small>PC Web, 2020</small>JO MALONE</div>
+            <a
+              href="./sub/project_05.html"
+              title="블랙누크 소개페이지 바로가기"
+            >
+              <div><small>Adaptive Web, 2020</small>BLACK NOOK</div>
             </a>
           </figcaption>
         </figure>
 
-        <figure class="project project03">
-          <img src="./image/mockup_03_03.jpg" alt="포트폴리오1" />
+        <figure class="project project_04">
+          <img src="./image/mockup_04.jpg" alt="포트폴리오1" />
           <figcaption>
-            <a href="./sub/project03.html">
-              <div><small>PC Web, 2020</small>COLDPLAY</div>
+            <a href="./sub/project_04.html">
+              <div><small>PC Web, 2020</small>JO MAILO</div>
             </a>
           </figcaption>
         </figure>
 
-        <figure class="project project04">
-          <img src="./image/mockup_04_1.jpg" alt="포트폴리오1" />
+        <figure class="project project_03">
+          <img src="./image/mockup_03.jpg" alt="포트폴리오1" />
           <figcaption>
-            <a href="./sub/project04.html">
-              <div><small>Mobile Web, 2020</small>PAPA JOHNS</div>
+            <a href="./sub/project_03.html">
+              <div><small>PC Web, 2020</small>GOLDFLY</div>
             </a>
           </figcaption>
         </figure>
 
-        <figure class="project project05">
-          <img src="./image/mockup_05_01.jpg" alt="포트폴리오1" />
+        <figure class="project project_02">
+          <img src="./image/mockup_02.jpg" alt="파파노스 소개페이지 바로가기" />
           <figcaption>
-            <a href="./sub/project05.html">
-              <div><small>PC Web, 2020</small>JEJU SHINWHA WORLD</div>
+            <a href="./sub/project_02.html">
+              <div><small>Mobile Web, 2020</small>PAPA NOHS</div>
+            </a>
+          </figcaption>
+        </figure>
+
+        <figure class="project project_01">
+          <img src="./image/mockup_01.jpg" alt="신라월드 소개페이지 바로가기" />
+          <figcaption>
+            <a href="./sub/project_01.html">
+              <div><small>PC Web, 2020</small>JEJU SHINLA WORLD</div>
             </a>
           </figcaption>
         </figure>
