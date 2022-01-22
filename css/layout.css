@@ -523,7 +523,7 @@ h1.logo img {
 }
 
 .menu ul li > a:hover {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 /*오른쪽 상단 메뉴*/
@@ -647,7 +647,7 @@ footer address {
     font-size: 1rem;
   }
   .menu ul li > a:active {
-    font-size: 1.2rem;
+    font-size: 1.04rem;
   }
   .gnb a {
     font-size: 1.3rem;

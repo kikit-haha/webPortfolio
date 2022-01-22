@@ -149,6 +149,10 @@ html {
   height: 100%;
 }
 
+section {
+  margin-bottom: 20vh;
+}
+
 .section_inner {
   width: 80vw;
   margin: 0px auto;
@@ -267,30 +271,8 @@ p {
   }
 }
 
-.cont_title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.cont_title img {
-  width: 80%;
-}
-
 .cont img {
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
-}
-
-@media screen and (max-width: 768px) {
-  .cont01 a {
-    top: 4px;
-  }
 }
 /*# sourceMappingURL=project_01.css.map */

@@ -52,11 +52,16 @@ form {
     align-items: space-around;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    label {
-      padding: 0.8em 0;
-    }
   }
 
+  label {
+    padding: 0.8em 0;
+  }
+
+  #email,
+  #name {
+    padding-left: 0.8em;
+  }
   .pure-group {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -90,9 +95,11 @@ form {
   }
 
   .honeypot-field {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
     label {
       font-size: 0.8em;
-      color: $darkgray;
+      color: $gnbRed;
       padding: 0;
     }
 

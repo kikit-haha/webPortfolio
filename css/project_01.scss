@@ -3,28 +3,14 @@
 @import "base";
 @import "project_layout";
 
-.cont_title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  img {
-    width: 80%;
-  }
-}
+// .cont_title {
+//   img {
+//     width: 80%;
+//   }
+// }
 
 .cont {
   img {
     transform: scale(1.01);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .cont_title {
-  }
-
-  .cont01 {
-    a {
-      top: 4px;
-    }
   }
 }

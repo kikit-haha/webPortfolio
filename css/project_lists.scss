@@ -106,7 +106,9 @@ article {
     // width: 100%;
   }
 }
-
+.project figcaption {
+  height: 22vw;
+}
 .project figcaption > a {
   width: 12vw;
   height: 19vw;
@@ -139,10 +141,12 @@ article {
     animation: none;
     transform: translateY(-15px);
   }
+
   small {
     display: block;
     font-size: 1vw;
     line-height: 1.2em;
+    height: 2.8em;
     font-weight: 300;
     margin-bottom: 1em;
   }
@@ -216,7 +220,7 @@ footer {
     left: 0;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 120%;
     perspective: unset;
   }
 
@@ -279,7 +283,8 @@ footer {
     img {
       transition: 0.3s;
 
-      object-fit: cover;
+      // object-fit: cover;
+      object-fit: contain;
       height: 100%;
       width: 100%;
     }
@@ -295,7 +300,6 @@ footer {
 
   .project figcaption > a {
     width: 80vw;
-    height: 100%;
 
     font-size: 5vw;
     line-height: 1.4em;

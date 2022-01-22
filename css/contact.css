@@ -232,8 +232,13 @@ form .form-elements {
       flex-wrap: wrap;
 }
 
-form .form-elements label {
+form label {
   padding: 0.8em 0;
+}
+
+form #email,
+form #name {
+  padding-left: 0.8em;
 }
 
 form .pure-group {
@@ -281,9 +286,16 @@ form .button-success:hover {
   color: #fff;
 }
 
+form .honeypot-field {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+}
+
 form .honeypot-field label {
   font-size: 0.8em;
-  color: #212121;
+  color: #ff5c5c;
   padding: 0;
 }
 
