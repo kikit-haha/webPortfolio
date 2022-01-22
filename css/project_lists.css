@@ -557,6 +557,13 @@ h1.logo img {
   transition: 0.5s;
 }
 
+@media (hover: hover) {
+  .more_btn:hover {
+    -webkit-animation: rotate_more_btn 4s linear infinite;
+            animation: rotate_more_btn 4s linear infinite;
+  }
+}
+
 @-webkit-keyframes rotate_more_btn {
   to {
     -webkit-transform: rotate(360deg);
@@ -569,11 +576,6 @@ h1.logo img {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
-}
-
-.more_btn:hover {
-  -webkit-animation: rotate_more_btn 4s linear infinite;
-          animation: rotate_more_btn 4s linear infinite;
 }
 
 .more_bar_top {
@@ -816,7 +818,7 @@ footer address {
     height: 46px;
     border-radius: 50%;
     padding: 10px;
-    background-color: rgba(87, 101, 116, 0.6);
+    background-color: rgba(0, 69, 71, 0.8);
     cursor: pointer;
   }
   .bar01 {

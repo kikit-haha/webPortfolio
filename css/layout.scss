@@ -232,16 +232,20 @@ h1.logo {
   align-items: center;
   transition: 0.5s;
 }
-
+@media (hover: hover) {
+  .more_btn:hover {
+    animation: rotate_more_btn 4s linear infinite;
+  }
+}
 @keyframes rotate_more_btn {
   to {
     transform: rotate(360deg);
   }
 }
 
-.more_btn:hover {
-  animation: rotate_more_btn 4s linear infinite;
-}
+// .more_btn:hover {
+//   animation: rotate_more_btn 4s linear infinite;
+// }
 
 .more_bar_top {
   position: absolute;
@@ -473,7 +477,7 @@ footer {
     border-radius: 50%;
     padding: 10px;
 
-    background-color: rgba(87, 101, 116, 0.6);
+    background-color: rgba(0, 69, 71, 0.8);
     cursor: pointer;
   }
   .bar01 {

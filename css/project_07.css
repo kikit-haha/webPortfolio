@@ -262,7 +262,8 @@ p {
     height: 45px;
     line-height: 45px;
     text-align: center;
-    top: 2px;
+    top: auto;
+    bottom: -50px;
   }
 }
 
