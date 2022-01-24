@@ -204,9 +204,9 @@ article img {
   height: 54px;
   vertical-align: middle;
   padding: 0 40px;
-  border-radius: 8px;
-  background-color: #1b1b1b;
-  color: #c4c4c4;
+  border-radius: 4px;
+  background-color: #424242;
+  color: #e1e1e1;
   font-size: 16px;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
@@ -215,8 +215,8 @@ article img {
 .cont01 a:hover {
   -webkit-transform: translate(-50%, 10px);
           transform: translate(-50%, 10px);
-  background-color: #c4c4c4;
-  color: #1b1b1b;
+  background-color: #e1e1e1;
+  color: #212121;
 }
 
 .detail {
@@ -236,7 +236,7 @@ article img {
 
 .detail p {
   font-size: 1em;
-  color: #c4c4c4;
+  color: #6d6d6d;
 }
 
 .detail_title,
@@ -272,10 +272,10 @@ p {
 }
 
 .cont_title {
-  background-color: #1b1b1b;
+  background-color: #212121;
 }
 
 .cont01 a {
-  background-color: #2d3436;
+  background-color: #424242;
 }
 /*# sourceMappingURL=project_07.css.map */

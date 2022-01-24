@@ -45,16 +45,16 @@ article {
     vertical-align: middle;
     padding: 0 40px;
 
-    border-radius: 8px;
-    background-color: $black;
-    color: $lightgray;
+    border-radius: 4px;
+    background-color: $middarkgray;
+    color: $white;
 
     font-size: 16px;
     transition: all 0.5s linear;
 
     &:hover {
       transform: translate(-50%, 10px);
-      background-color: $lightgray;
+      background-color: $white;
       color: $black;
     }
   }
@@ -81,6 +81,7 @@ article {
 p {
   text-align: center;
 }
+
 @media screen and (max-width: 768px) {
   .section_inner {
     width: 100vw;
