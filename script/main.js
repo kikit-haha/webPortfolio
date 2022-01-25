@@ -184,7 +184,7 @@
     projectContent.forEach((elem, i) => {
       elem.style.top = `${projects[i].top}%`;
       if (width <= 768) {
-        projectWrap.style.height = projectWrapHeight(90, projectNum, "vw");
+        projectWrap.style.height = projectWrapHeight(100, projectNum, "vw");
         elem.style.left = "0px";
         elem.style.right = "0px";
       } else {
