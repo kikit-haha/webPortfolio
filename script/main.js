@@ -11,12 +11,10 @@
   const introContent = document.querySelectorAll(".intro");
 
   const projectWrap = document.querySelector(".project_wrap");
-  console.log(projectWrap, ": projectWrap");
   const projectContent = document.querySelectorAll("figure.project");
 
   const IntroductionWrap = document.querySelector(".introduce_wrap");
 
-  console.log("conected");
   const projects = [
     { name: "JEJU SHINWHA WORLD", left: 0, top: 0 },
     { name: "PAPA JOHNS", left: 0, top: 0 },
@@ -24,6 +22,7 @@
     { name: "JO MALONE", left: 0, top: 0 },
     { name: "BLACKYAK", left: 0, top: 0 },
     { name: "CARROT GAME", left: 0, top: 0 },
+    { name: "NOMFLIX", left: 0, top: 0 },
   ];
   // 메인페이지 스크립트
   settingProjectPos();
@@ -170,15 +169,22 @@
     settingProjectPos();
   });
 
+  function projectWrapHeight(itemHeight, projectNum, unit) {
+    const height = itemHeight * projectNum;
+    return height + unit;
+  }
+
   function settingProjectPos() {
     const projectNum = projects.length;
     const topGap = parseInt(100 / projectNum);
+    projectWrap.style.height = projectWrapHeight(40, projectNum, "vw");
 
     calcPos(topGap);
 
     projectContent.forEach((elem, i) => {
       elem.style.top = `${projects[i].top}%`;
       if (width <= 768) {
+        projectWrap.style.height = projectWrapHeight(90, projectNum, "vw");
         elem.style.left = "0px";
         elem.style.right = "0px";
       } else {
