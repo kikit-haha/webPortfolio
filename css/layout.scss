@@ -183,41 +183,6 @@ h1.logo {
   }
 }
 
-/*프로필 이미지 서식*/
-.profile {
-  position: absolute;
-  width: 60vw;
-  height: 100%;
-  top: 50%;
-  left: 20vw;
-  transform: translateY(-50%);
-
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  .profile_photo {
-    width: 20vw;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  .profile_text {
-    width: 35vw;
-    height: 20%;
-    font-size: 3vw;
-    font-weight: 700;
-    line-height: 1.8em;
-    color: $lightgray;
-  }
-  .profile_name {
-    color: #ffc672;
-  }
-}
-
 /* 하단 더보기 버튼 */
 .more_btn {
   width: 40px;

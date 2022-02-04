@@ -118,6 +118,40 @@ section {
   right: 20vw;
 }
 
+/*프로필 이미지 서식*/
+.profile {
+  position: absolute;
+  width: 60vw;
+  height: 100%;
+  top: 50%;
+  left: 20vw;
+  transform: translateY(-50%);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .profile_photo {
+    width: 20vw;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .profile_text {
+    width: 35vw;
+    height: 20%;
+    font-size: 3vw;
+    font-weight: 700;
+    line-height: 1.8em;
+    color: $lightgray;
+  }
+  .profile_name {
+    color: #ffc672;
+  }
+}
 //introduce 서식
 .introduce_wrap {
   width: 100vw;
@@ -209,7 +243,6 @@ figcaption {
   position: absolute;
   bottom: 0;
   left: 0;
-
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -219,40 +252,38 @@ figcaption a {
   width: 100%;
   height: 100%;
   display: block;
-  background-color: $darkgray;
+  background-color: $black;
   color: $white;
   font-size: 1.3rem;
-
   transition: 0.3s cubic-bezier(0.27, 0.58, 0.36, 1);
   opacity: 0;
+}
+.figcaption_inner {
+  width: 100%;
+  height: 100%;
 
-  div {
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
+  background-color: $darkgray;
+  transition: 0.3s;
+  opacity: 0;
 
-    background-color: $darkgray;
-    transition: 0.3s;
-    opacity: 0;
-  }
-
-  small {
-    display: block;
-    width: 100%;
-    text-align: center;
+  & > div:nth-child(1),
+  & > div:nth-child(3) {
     font-size: 0.8em;
-    font-weight: 300;
-    margin-bottom: 1em;
+    margin-bottom: 3%;
+    color: $lightgray;
+  }
+  & > div:nth-child(2) {
+    margin-bottom: 8%;
   }
 }
-
 figure:hover {
   a {
-    opacity: 0.85;
+    opacity: 0.92;
     div {
       opacity: 100%;
     }
@@ -320,7 +351,7 @@ div.skill_button {
   position: relative;
   left: calc(45vw - 7vw);
   top: -84px;
-  border: 1px solid $green;
+  border: 1px solid $torquise;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -332,13 +363,13 @@ div.skill_button {
 }
 
 div.skill_button:hover {
-  background-color: $green;
+  background-color: $torquise;
   // color: $black;
 }
 
 @keyframes glowButton {
   to {
-    box-shadow: 0px 0px 40px $green;
+    box-shadow: 0px 0px 40px $torquise;
   }
 }
 
@@ -402,16 +433,17 @@ div.skill_button:hover {
 
 .skillbar {
   position: relative;
-  width: 70%;
-  height: 3vh;
+  width: 60%;
+  height: 50%;
   background-color: $middarkgray;
   border-radius: 10px;
 }
 
 .skill_text {
-  width: 20%;
-  height: 1.4vw;
-  padding: 12px 20px;
+  width: 30%;
+  height: 50%;
+  line-height: 100%;
+  // padding: 12px 20px;
   border-radius: 10px;
   display: flex;
   justify-content: center;

@@ -495,47 +495,6 @@ h1.logo img {
   background-color: #000000;
 }
 
-/*프로필 이미지 서식*/
-.profile {
-  position: absolute;
-  width: 60vw;
-  height: 100%;
-  top: 50%;
-  left: 20vw;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.profile .profile_photo {
-  width: 20vw;
-}
-
-.profile img {
-  width: 100%;
-  height: auto;
-}
-
-.profile .profile_text {
-  width: 35vw;
-  height: 20%;
-  font-size: 3vw;
-  font-weight: 700;
-  line-height: 1.8em;
-  color: #6d6d6d;
-}
-
-.profile .profile_name {
-  color: #ffc672;
-}
-
 /* 하단 더보기 버튼 */
 .more_btn {
   width: 40px;
@@ -1102,7 +1061,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   body {
-    height: 500vh;
+    height: 600vh;
     width: 100vw;
     -webkit-overflow-scrolling: touch;
     color: #555;

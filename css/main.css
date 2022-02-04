@@ -6293,7 +6293,7 @@ html {
 .popup {
   position: absolute;
   top: 0%;
-  right: 20%;
+  left: 20%;
   width: 300px;
   height: 200px;
   font-size: 30px;
@@ -6325,11 +6325,11 @@ html {
 
 .popup .p_txt {
   font-size: 1rem;
-  height: 160px;
+  height: 140px;
   text-align: center;
   line-height: 1.8rem;
   font-weight: bold;
-  color: #c4c4c4;
+  color: #6d6d6d;
   background-color: #212121;
   padding: 0px 10px;
   display: -webkit-box;
@@ -6358,7 +6358,7 @@ html {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  color: #c4c4c4;
+  color: #6d6d6d;
   bottom: -10px;
   left: 95px;
   cursor: pointer;
@@ -6367,7 +6367,7 @@ html {
 /*콘텐츠영역 서식 시작*/
 header {
   width: 100%;
-  background-color: #181818;
+  background-color: #1b1b1b;
 }
 
 header h1 {
@@ -6423,6 +6423,47 @@ section {
   right: 20vw;
 }
 
+/*프로필 이미지 서식*/
+.profile {
+  position: absolute;
+  width: 60vw;
+  height: 100%;
+  top: 50%;
+  left: 20vw;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile .profile_photo {
+  width: 20vw;
+}
+
+.profile img {
+  width: 100%;
+  height: auto;
+}
+
+.profile .profile_text {
+  width: 35vw;
+  height: 20%;
+  font-size: 3vw;
+  font-weight: 700;
+  line-height: 1.8em;
+  color: #6d6d6d;
+}
+
+.profile .profile_name {
+  color: #ffc672;
+}
+
 .introduce_wrap {
   width: 100vw;
   height: 100vh;
@@ -6431,7 +6472,7 @@ section {
 .introduce {
   width: 70vw;
   height: 100vh;
-  background-color: #006064;
+  background-color: #004547;
   z-index: 3;
   margin: 0 auto;
 }
@@ -6503,8 +6544,8 @@ figure.project {
   overflow: hidden;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-box-shadow: 5px 6px 8px #1b1b1b;
-          box-shadow: 5px 6px 8px #1b1b1b;
+  -webkit-box-shadow: 5px 6px 8px #212121;
+          box-shadow: 5px 6px 8px #212121;
 }
 
 figure.project img {
@@ -6537,36 +6578,41 @@ figcaption a {
   opacity: 0;
 }
 
-figcaption a div {
+.figcaption_inner {
   width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #212121;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 0;
 }
 
-figcaption a small {
-  display: block;
-  width: 100%;
-  text-align: center;
+.figcaption_inner > div:nth-child(1),
+.figcaption_inner > div:nth-child(3) {
   font-size: 0.8em;
-  font-weight: 300;
-  margin-bottom: 1em;
+  margin-bottom: 3%;
+  color: #6d6d6d;
+}
+
+.figcaption_inner > div:nth-child(2) {
+  margin-bottom: 8%;
 }
 
 figure:hover a {
-  opacity: 0.85;
+  opacity: 0.92;
 }
 
 figure:hover a div {
@@ -6738,16 +6784,16 @@ div.skill_button:hover {
 
 .skillbar {
   position: relative;
-  width: 70%;
-  height: 3vh;
-  background-color: #2d3436;
+  width: 60%;
+  height: 50%;
+  background-color: #424242;
   border-radius: 10px;
 }
 
 .skill_text {
-  width: 20%;
-  height: 1.4vw;
-  padding: 12px 20px;
+  width: 30%;
+  height: 50%;
+  line-height: 100%;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6831,36 +6877,22 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-top: 300px;
-    height: 150%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    height: 40rem;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   .profile .profile_text {
     font-size: 1.4rem;
-    height: 28%;
+    line-height: 2.4rem;
+    height: 9.6rem;
   }
   .profile .profile_photo {
-    width: 40vw;
+    height: 18rem;
+    width: auto;
   }
-  .profile {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-top: 300px;
-    height: 150%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  .profile .profile_text {
-    font-size: 1.4rem;
-    height: 28%;
-  }
-  .profile .profile_photo {
-    width: 40vw;
+  .profile .profile_photo img {
+    height: 100%;
   }
   .introduce .intro {
     font-size: 2rem;
@@ -6924,17 +6956,29 @@ footer {
     height: 80%;
     width: 100vw;
   }
-  figcaption a {
+  figure.project figcaption {
+    position: relative;
+    height: 20%;
+  }
+  figure.project figcaption > a {
     opacity: 1;
     font-size: 1.1rem;
     background-color: transparent;
+    height: 100%;
   }
-  figcaption a div {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 20%;
+  figure.project figcaption > a .figcaption_inner {
+    height: 100%;
     opacity: 1;
+  }
+  figure.project figcaption > a .figcaption_inner div {
+    margin: 0;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
   }
   .project_01,
   .project_02,

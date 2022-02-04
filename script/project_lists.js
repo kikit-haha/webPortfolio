@@ -1,5 +1,4 @@
 (function () {
-  // 스크롤했을때 앞으로 튀어나오는거.뭘이동시키지? 하우스
   const articleElem = document.querySelector("article");
   const sectionElem = document.querySelector("section");
   const aside = document.querySelector("aside");

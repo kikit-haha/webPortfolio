@@ -24,24 +24,22 @@
     { name: "CARROT GAME", left: 0, top: 0 },
     { name: "NOMFLIX", left: 0, top: 0 },
   ];
-  // 메인페이지 스크립트
+
   settingProjectPos();
   getWindowSize();
-  //팝업창
 
-  const popup = document.createElement("div");
-  popup.classList.add("popup");
-  popup.innerHTML =
-    '<p class="p_txt">본사이트는 상업용목적이아닌 개인 포트폴리오 용도로 제작되었습니다.<br/> 일부 내용 및 이미지 등은 출처가 따로 있음을 밝힙니다.</p><i class="fa fa-times"></i>';
+  // const popup = document.createElement("div");
+  // popup.classList.add("popup");
+  // popup.innerHTML =
+  //   '<p class="p_txt">본사이트는 상업용목적이아닌 개인 포트폴리오 용도로 제작되었습니다.<br/> 일부 내용 및 이미지 등은 출처가 따로 있음을 밝힙니다.</p><i class="fa fa-times"></i>';
 
-  body.append(popup);
+  // body.append(popup);
 
-  let popupClose = document.querySelector(".popup>i.fa-times");
-  popupClose.addEventListener("click", () => {
-    popup.classList.add("remove");
-  });
+  // let popupClose = document.querySelector(".popup>i.fa-times");
+  // popupClose.addEventListener("click", () => {
+  //   popup.classList.add("remove");
+  // });
 
-  // 마우스따라서 회전하는 기능
   let mousePos = {
     x: 0,
     y: 0,
@@ -67,7 +65,6 @@
     });
   });
 
-  //스크롤되면서 하나씩 보이게
   function visibleIntroduce() {
     let sTop = window.pageYOffset;
     const hHeight = header.getBoundingClientRect().height;
@@ -105,7 +102,6 @@
     }
   }
 
-  //스크롤하면서 너비 넓어지게하기
   window.addEventListener("scroll", onScrollHandler);
 
   function onScrollHandler() {
@@ -128,11 +124,10 @@
     }
   }
 
-  //스킬바
-
   skillButton.addEventListener("click", () => {
     const skillLabel = document.querySelectorAll(".skill_label"); //0,1,2,3
-    const skillValue = [85, 80, 60, 60];
+    console.log(skillLabel, ": skillLabel");
+    const skillValue = [85, 80, 75, 80];
     const firstSkillLabelWidth = skillLabel[0].style.width;
     const firstSkill = firstSkillLabelWidth.split("").slice(0, 2).join("");
     const firstSkillNum = parseInt(firstSkill);
@@ -152,15 +147,12 @@
     }
   });
 
-  // 스티키 컨텐츠
   function getWindowSize() {
     if (IntroductionWrap) {
       let introHeight = window.innerHeight * 5;
       IntroductionWrap.style.height = `${introHeight}px`;
     }
   }
-
-  //윈도우 리사이즈 이벤트
 
   window.addEventListener("resize", () => {
     height = window.innerHeight;

@@ -1,0 +1,43 @@
+@charset "utf-8";
+@import "reset";
+@import "base";
+@import "project_layout";
+
+.cont_title {
+  background-color: $black;
+}
+
+.cont01 {
+  a {
+    background-color: $middarkgray;
+  }
+}
+
+@mixin projectLayout($contTitleBG: $black, $cont01: $middarkgray) {
+  .cont_title {
+    background-color: $contTitleBG;
+  }
+  .cont01 {
+    a {
+      background-color: $cont01;
+    }
+  }
+}
+.project_01 {
+  @include projectLayout(#101010);
+}
+.project_03 {
+  @include projectLayout(#a5a8b7, #101010);
+}
+.project_04 {
+  @include projectLayout(#a5a8b7, #7c7d9b);
+}
+.project_05 {
+  @include projectLayout(#cfcfcf);
+}
+.project_06 {
+  @include projectLayout(#d16910);
+}
+.project_07 {
+  @include projectLayout(#101010, $middarkgray);
+}
