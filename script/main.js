@@ -127,7 +127,7 @@
   skillButton.addEventListener("click", () => {
     const skillLabel = document.querySelectorAll(".skill_label"); //0,1,2,3
     console.log(skillLabel, ": skillLabel");
-    const skillValue = [85, 80, 75, 80];
+    const skillValue = [85, 80, 75, 80, 60];
     const firstSkillLabelWidth = skillLabel[0].style.width;
     const firstSkill = firstSkillLabelWidth.split("").slice(0, 2).join("");
     const firstSkillNum = parseInt(firstSkill);

@@ -6756,12 +6756,20 @@ div.skill_button:hover {
   background-color: rgba(239, 126, 35, 0.72);
 }
 
-.skills li:last-child .skill_text {
+.skills li:nth-child(4) .skill_text {
   background-color: #1d2d39;
 }
 
-.skills li:last-child .skill_label {
+.skills li:nth-child(4) .skill_label {
   background-color: rgba(29, 45, 57, 0.74);
+}
+
+.skills li:nth-child(5) .skill_text {
+  background-color: #33a7c4;
+}
+
+.skills li:nth-child(5) .skill_label {
+  background-color: rgba(94, 213, 243, 0.74);
 }
 
 .skills > li {
@@ -6779,7 +6787,6 @@ div.skill_button:hover {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 20px;
 }
 
 .skillbar {
@@ -6893,6 +6900,7 @@ footer {
   }
   .profile .profile_photo img {
     height: 100%;
+    width: auto;
   }
   .introduce .intro {
     font-size: 2rem;

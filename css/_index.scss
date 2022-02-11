@@ -378,45 +378,31 @@ div.skill_button:hover {
   height: 42vh;
   margin-left: 10%;
   overflow: hidden;
-
-  li:first-child {
+  @mixin skillBars($textColor, $barColor) {
     .skill_text {
-      background-color: #f75802;
+      background-color: $textColor;
     }
-
     .skill_label {
-      background-color: rgba(247, 88, 2, 0.69);
+      background-color: $barColor;
     }
+  }
+  li:first-child {
+    @include skillBars(#f75802, rgba(247, 88, 2, 0.69));
   }
 
   li:nth-child(2) {
-    .skill_text {
-      background-color: #1d6db5;
-    }
-
-    .skill_label {
-      background-color: rgba(29, 109, 181, 0.82);
-    }
+    @include skillBars(#1d6db5, rgba(29, 109, 181, 0.82));
   }
 
   li:nth-child(3) {
-    .skill_text {
-      background-color: #ef7e23;
-    }
-
-    .skill_label {
-      background-color: rgba(239, 126, 35, 0.72);
-    }
+    @include skillBars(#ef7e23, rgba(239, 126, 35, 0.72));
   }
 
-  li:last-child {
-    .skill_text {
-      background-color: #1d2d39;
-    }
-
-    .skill_label {
-      background-color: rgba(29, 45, 57, 0.74);
-    }
+  li:nth-child(4) {
+    @include skillBars(#1d2d39, rgba(29, 45, 57, 0.74));
+  }
+  li:nth-child(5) {
+    @include skillBars(#33a7c4, rgba(94, 213, 243, 0.74));
   }
 }
 
@@ -428,7 +414,7 @@ div.skill_button:hover {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  // margin-bottom: 10px;
 }
 
 .skillbar {
