@@ -175,9 +175,9 @@ section.about h3 {
 
 .about_01 {
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   position: relative;
-  margin-bottom: 10vh;
+  margin-bottom: 14vh;
 }
 
 .about_01 .title_01 {
@@ -206,7 +206,7 @@ section.about h3 {
 
 .about_01_inner .about_intro {
   width: 58%;
-  color: #6d6d6d;
+  color: #b7b7b7;
   line-height: 2em;
   font-size: 1rem;
   text-align: left;
@@ -236,7 +236,7 @@ section.about h3 {
 }
 
 .about_02_list .list li {
-  color: #6d6d6d;
+  color: #b7b7b7;
   margin-bottom: 10px;
   line-height: 2em;
 }

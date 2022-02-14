@@ -6329,7 +6329,7 @@ html {
   text-align: center;
   line-height: 1.8rem;
   font-weight: bold;
-  color: #6d6d6d;
+  color: #b7b7b7;
   background-color: #212121;
   padding: 0px 10px;
   display: -webkit-box;
@@ -6358,7 +6358,7 @@ html {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  color: #6d6d6d;
+  color: #b7b7b7;
   bottom: -10px;
   left: 95px;
   cursor: pointer;
@@ -6457,7 +6457,7 @@ section {
   font-size: 3vw;
   font-weight: 700;
   line-height: 1.8em;
-  color: #6d6d6d;
+  color: #b7b7b7;
 }
 
 .profile .profile_name {
@@ -6604,7 +6604,7 @@ figcaption a {
 .figcaption_inner > div:nth-child(3) {
   font-size: 0.8em;
   margin-bottom: 3%;
-  color: #6d6d6d;
+  color: #b7b7b7;
 }
 
 .figcaption_inner > div:nth-child(2) {
